@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css-describe-a-grid-layout-using-grid-template-areas</title>
+    <style>
+        .container > *{
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-gap: 10px;
+
+            /* .: empty space holder*/
+            grid-template-areas:
+                    ". header"
+                    "aside section"
+                    "aside footer";
+
+            grid-template-rows: 60px 10fr 2fr;
+            grid-template-columns: 4fr 10fr;
+
+        }
+
+        header {
+            grid-area: header;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        section {
+            grid-area: section
+        }
+
+        footer {
+            grid-area: footer
+        }
+
+        @media (max-width: 700px) {
+            .container {
+                grid-template-areas:
+                        "header header"
+                        "aside aside"
+                        "section section"
+                        "footer footer";
+
+                grid-template-rows: 1fr 2fr 6fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>Header</header>
+        <aside>Aside</aside>
+        <section>Section</section>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>
