@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ss-describe-a-grid-layout-using-named-grid-lines#/tab-transcript</title>
+    <style>
+        .container > * {
+            background-color: chocolate;
+            font-size: 2em;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-gap: 10px;
+
+            grid-template-columns:
+            [left-sidebar-start] 1fr
+            [main-content-start] 2fr
+            [right-sidebar-start] 1fr;
+
+            grid-template-rows:
+                [main-start] 80%;
+                [footer-start] 20%;
+        }
+
+        .footer {
+            grid-column-start: main-content-start;
+            grid-column-end: -1;
+        }
+
+        .left-sidebar {
+            grid-row-start: main-start;
+            grid-row-end: span 2;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="left-sidebar">Left Sidebar</div>
+    <div class="main-content">Main Content</div>
+    <div class="right-sidebar">Right Sidebar</div>
+    <div class="footer">Footer</div>
+</div>
+</body>
+</html>
