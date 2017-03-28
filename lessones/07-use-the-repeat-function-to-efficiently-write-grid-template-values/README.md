@@ -35,3 +35,5 @@ so that we can reuse those later
             grid-column: col-sm-start / end;
         }
 ```
+
+[DEMO](https://plnkr.co/edit/0KEkh07B2M6aHYSyHPUn)

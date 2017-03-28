@@ -14,3 +14,5 @@ grid-template-rows: 60px 10fr 2fr;
 ```
 It looks like this:
 ![Empty placeholder](../../images/placeholder.png);
+
+[DEMO](https://plnkr.co/edit/3UFnRwOs4SQVsmWdUj54)

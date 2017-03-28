@@ -12,3 +12,5 @@
             grid-template-columns: 1fr 2fr 1fr;
         }
 ```
+
+[DEMO](https://embed.plnkr.co/PorJIk2d8kEIV8c749QZ/)
