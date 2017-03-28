@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>use-the-repeat-function-to-efficiently-write-grid-template-values</title>
+    <title>use-auto-fill-and-auto-fit-if-the-number-of-repeated-grid-tracks-is-not-to-be-def</title>
     <style>
         .container > * {
-            background-color: darksalmon;
+            background-color: hotpink;
         }
 
         .container {
@@ -13,18 +13,13 @@
             grid-gap: 10px;
             height: 100vh;
             grid-template-columns:
-                [start] repeat(
-                    3, /*each row has 3 repeat items*/
-                    [col-xs-start] minmax(min-content, auto)
-                    [col-xs-end col-sm-start] minmax(20px, auto)
-                    [col-sm-end col-md-start] minmax(40px, auto)
-                    [col-md-end col-lg-start] minmax(80px, auto)
-                    [col-lg-end]
-                ) [end];
-        }
-
-        .box:nth-of-type(26){
-            grid-column: col-sm-start / end;
+                    repeat(
+                            auto-fill,
+                            minmax(50px, auto)
+                            minmax(70px, auto)
+                            minmax(90px, auto)
+                            minmax(110px, auto)
+                    );
         }
     </style>
 </head>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>use-auto-fill-and-auto-fit-if-the-number-of-repeated-grid-tracks-is-not-to-be-def</title>
+    <style>
+        .container > * {
+            background-color: hotpink;
+        }
+
+        .container {
+            display: grid;
+            grid-gap: 10px;
+            height: 100vh;
+            grid-template-columns:
+                    repeat(
+                            auto-fit,
+                            minmax(50px, auto)
+                            minmax(70px, auto)
+                            minmax(90px, auto)
+                    );
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="box a">A</div>
+    <div class="box b">B</div>
+    <div class="box c">C</div>
+</div>
+</body>
+</html>
