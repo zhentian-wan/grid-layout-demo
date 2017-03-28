@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>use-the-minmax-function-to-specify-dynamically-sized-tracks</title>
+    <style>
+        .container > *{
+            background-color: rebeccapurple;
+            color: white;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-gap: 30px;
+            grid-template-columns:
+                minmax(min-content, 1fr)
+                minmax(200px, 4fr);
+
+            /*
+            minmax(100, 1f)
+            minmax(max-content, 4f)
+            */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a">Lorem ipsum dolor sit amet, mei no utamur efficiantur. Te malorum equidem referrentur cum, vim facilisi singulis efficiendi ei. Fabulas dissentias definitionem no qui. Te saepe copiosae mediocrem cum. In eos adhuc nulla novum.</div>
+        <div class="b">Lorem ipsum dolor sit amet, mei no utamur efficiantur. Te malorum equidem referrentur cum, vim facilisi singulis efficiendi ei. Fabulas dissentias definitionem no qui. Te saepe copiosae mediocrem cum. In eos adhuc nulla novum.</div>
+    </div>
+</body>
+</html>
