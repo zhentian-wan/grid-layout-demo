@@ -33,3 +33,5 @@ The same as:
                 / 2fr auto 1fr;
         }
 ```
+
+[Demo](https://embed.plnkr.co/lEJgGAZXTl6LEcwpCpNZ/)
