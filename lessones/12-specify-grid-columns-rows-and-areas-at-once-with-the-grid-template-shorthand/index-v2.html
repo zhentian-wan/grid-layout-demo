@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>specify-grid-columns-rows-and-areas-at-once-with-the-grid-template-shorthand</title>
+    <style>
+        .container > * {
+            background-color: navajowhite;
+            color: white;
+            font-size: 40px;
+        }
+
+        .container {
+            display: grid;
+            height: 100vh;
+            grid-gap: 10px;
+            grid-template:
+                [nav-start] "nav-1 nav-2 nav-3" 1fr [nav-end]
+                [main-start] "main main nav-3" 5fr [main-end]
+                / 2fr auto 1fr;
+            /*
+                [named grid row line start] "area1 area2 ..." 1fr [named-grid-line end]
+            */
+        }
+
+        nav:nth-of-type(1) {
+            grid-area: nav-1;
+        }
+        nav:nth-of-type(2) {
+            grid-area: nav-2;
+        }
+        nav:nth-of-type(3) {
+            grid-area: nav-3;
+        }
+        section:only-of-type {
+            grid-area: main;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <nav>Menu 1</nav>
+    <nav>Menu 2</nav>
+    <nav>Menu 3</nav>
+    <section>Main</section>
+</div>
+</body>
+</html>
