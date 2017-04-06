@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flex direction</title>
+    <style>
+        .container, .container--row-reverse > * {
+            background-color: mediumaquamarine;
+        }
+
+        .container {
+            display: flex;
+            counter-reset: box;
+        }
+
+        .column {
+            flex-direction: column;
+        }
+
+        .row-reverse {
+            flex-direction: row-reverse;
+        }
+        .column-reverse {
+            flex-direction:column-reverse;
+        }
+
+        .box:before {
+            counter-increment: box;
+            content: "Box " counter(box);
+        }
+
+        .box {
+            border: 5px solid red;
+            height: 20vh;
+            width: 20vw;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>Flex: row</h2>
+        <div class="container">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Flex: row-reverse</h2>
+        <div class="container row-reverse">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Flex: column</h2>
+        <div class="container column">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Flex: column-reverse</h2>
+        <div class="container column column-reverse">
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+            <div class="box">
+            </div>
+        </div>
+    </section>
+</body>
+</html>
