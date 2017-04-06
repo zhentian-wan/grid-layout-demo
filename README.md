@@ -20,6 +20,7 @@ Also including some lib demo for easy layout our website.
     * [10 Grid ordering](grid-layout-lessones/10-using-order)
     * [11 Grid nesting grid layout](grid-layout-lessones/11-nest-a-grid-within-a-grid)
     * [12 Grid template shorthand](grid-layout-lessones/12-specify-grid-columns-rows-and-areas-at-once-with-the-grid-template-shorthand)
+  
   * [Flex layout](flex-layout-lessons)
-    *[01 flex direcction](flex-layout-lessons/01-flex-direction)
-    *[02 justify content](flex-layout-lessons/02-justify-content)
+    * [01 flex direcction](flex-layout-lessons/01-flex-direction)
+    * [02 justify content](flex-layout-lessons/02-justify-content)
