@@ -2,9 +2,110 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>justify content</title>
+    <title>Flex direction</title>
+    <style>
+        .container, .container--row-reverse > * {
+            background-color: lightyellow;
+        }
+
+        .container {
+            display: flex;
+            counter-reset: box;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .flexEnd {
+            justify-content: flex-end;
+        }
+
+        .spaceBetween {
+            justify-content: space-between;
+        }
+
+        .spaceAround {
+            justify-content: space-around;
+        }
+
+        .box:before {
+            counter-increment: box;
+            content: "Box " counter(box);
+        }
+
+        .box {
+            border: 5px solid red;
+            height: 20vh;
+            width: 20vw;
+        }
+    </style>
 </head>
 <body>
-
+<section>
+    <h2>Justify content: flex-start</h2>
+    <div class="container">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Justify content: flex-end</h2>
+    <div class="container flexEnd">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Justify content: space-between</h2>
+    <div class="container spaceBetween">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Justify content: space-around</h2>
+    <div class="container spaceAround">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Justify content: center</h2>
+    <div class="container center">
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+        <div class="box">
+        </div>
+    </div>
+</section>
 </body>
 </html>
