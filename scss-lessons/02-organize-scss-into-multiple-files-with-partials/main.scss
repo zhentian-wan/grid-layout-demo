@@ -1,0 +1,10 @@
+// in _color.scss file has variable $primary-color
+// if other file want to use it, make sure _color file
+// should also import color file
+@import "color";
+@import "other";
+
+.color {
+  color: $primary-color;
+}
+
