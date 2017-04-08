@@ -1,10 +1,29 @@
-// in _color.scss file has variable $primary-color
-// if other file want to use it, make sure _color file
-// should also import color file
+/**
+ About using variable
+
+ There are tow cases when using variable
+
+ 1. none partial file (provider) + none partial file
+    Variable only available for its own file scope.
+    If you want to use one variable inside file A from file B
+    You have to import file A into file B.
+
+ 2. partial file (provider) + none partial file
+    If you have an variable defined in partial file, and you want to
+    use it inside none partial file, you also need to import partial
+    file into none partial file.
+
+ 3. partial file (provider) + partial file
+    If you have an variable defined in partial file A, and you want to use it
+    inside another partial file B, you have to import file A into main.scss file
+    before you import file B into main.scss. Then you can use variable inside file A
+    inside file B.
+*/
 @import "color";
+@import "partial";
 @import "other";
 
 .color {
-  color: $primary-color;
+  color: $primary-color; // From _color
 }
 
