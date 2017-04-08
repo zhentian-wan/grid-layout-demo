@@ -4,11 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "scss": "node-sass scss-lessons -o scss-lessons/css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "^4.5.2",
     "tachyons": "4.7.0"
   }
 }
