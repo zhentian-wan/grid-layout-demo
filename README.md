@@ -24,3 +24,7 @@ Also including some lib demo for easy layout our website.
   * [Flex layout](flex-layout-lessons)
     * [01 flex direcction](flex-layout-lessons/01-flex-direction)
     * [02 justify content](flex-layout-lessons/02-justify-content)
+    
+  * [SCSS](scss-lessons)
+    * [Install node-sass](scss-lessons/01-install.scss)
+    * [Partial file and variable](scss-lessons/02-organize-scss-into-multiple-files-with-partials)
