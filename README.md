@@ -28,3 +28,4 @@ Also including some lib demo for easy layout our website.
   * [SCSS](scss-lessons)
     * [Install node-sass](scss-lessons/01-install.scss)
     * [Partial file and variable](scss-lessons/02-organize-scss-into-multiple-files-with-partials)
+    * [Parent selector](scss-lessons/03-parent-selector)

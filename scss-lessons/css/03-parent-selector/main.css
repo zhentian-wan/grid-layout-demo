@@ -1,0 +1,16 @@
+.box {
+  transition: all 0.8s ease-in-out;
+  background-color: #5fb3ce;
+  border: 1px solid burlywood;
+  font-size: 1.5em;
+  width: 200px;
+  height: 200px; }
+  .box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh; }
+  .box:hover {
+    background-color: #ff4d4d;
+    transform: rotate(360deg); }
