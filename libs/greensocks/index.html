@@ -19,7 +19,21 @@
 </div>
 <script>
     const $map = document.getElementById("map");
+    Draggable.create($map, {
+        type:"scroll",
+        edgeResistance:0.5,
+        throwProps:true,
+        lockAxis: false
+    });
 
+    // Zoom
+    $map.addEventListener('wheel', function(evt) {
+        evt.preventDefault();
+        const scrolledDown = evt.deltaY > 0;
+        TweenLite.to(this, 0, {
+            transform: `scale(${scrolledDown ? 1: 2})`
+        })
+    })
 </script>
 </body>
 </html>
