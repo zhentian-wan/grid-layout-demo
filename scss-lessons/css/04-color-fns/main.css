@@ -1,0 +1,45 @@
+.base {
+  background-color: #24ea12;
+  color: #d812ea; }
+
+.lighten_base {
+  background-color: #8ff686;
+  color: #ec86f6; }
+
+.darken_base {
+  background-color: #127409;
+  color: #6b0974; }
+
+.linear-gradient {
+  background-image: linear-gradient(#d812ea, #ec86f6, #6b0974);
+  color: #c8fa05; }
+
+.hover {
+  background-image: linear-gradient(#24ea12, #8ff686, #127409);
+  color: #c8fa05; }
+  .hover:hover {
+    color: rgba(200, 250, 5, 0.5); }
+
+.darken-color {
+  color: #44c438; }
+
+.lighten-color {
+  color: rgba(36, 234, 18, 0.5); }
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  counter-reset: box;
+  height: 100vh; }
+
+.box:before {
+  counter-increment: box;
+  font-size: 3em;
+  content: counter(box); }
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center; }

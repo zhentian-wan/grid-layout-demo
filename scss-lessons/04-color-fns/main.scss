@@ -1,0 +1,73 @@
+$base: #24ea12;
+$lighten_base: lighten($base, 25%);
+$darken_base: darken($base, 25%);
+
+$clb: complement($base);
+$cllb: complement($lighten_base);
+$cldb: complement($darken_base);
+
+$light-color: scale_color($base, $alpha: -50%);
+$dark-color: scale_color($base, $saturation: -35%);
+
+.base {
+  background-color: $base;
+  color: $clb;
+}
+
+.lighten_base {
+  background-color: $lighten_base;
+  color: $cllb;
+}
+
+.darken_base {
+  background-color: $darken_base;
+  color: $cldb;
+}
+
+.linear-gradient {
+  background-image: linear-gradient($clb, $cllb, $cldb);
+  color: mix($base, yellow, 25%);
+}
+
+
+.hover {
+  background-image: linear-gradient($base, $lighten_base, $darken_base);
+  color: mix($base, yellow, 25%);
+  &:hover {
+    color: transparentize(mix($base, yellow, 25%), .5); // based on given color, add 0.5 opacity
+  }
+}
+
+.darken-color {
+  color: $dark-color;
+}
+
+.lighten-color {
+  color: $light-color;
+}
+
+
+
+
+
+
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  counter-reset: box;
+  height: 100vh;
+}
+
+.box:before {
+  counter-increment: box;
+  font-size: 3em;
+  content: counter(box);
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

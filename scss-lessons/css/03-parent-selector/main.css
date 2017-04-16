@@ -6,6 +6,7 @@
   width: 200px;
   height: 200px; }
   .box-container {
+    /* .box-container, & --> .box*/
     display: flex;
     justify-content: center;
     align-items: center;
