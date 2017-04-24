@@ -11,5 +11,5 @@ $cldb: complement($darken_base);
 $light-color: scale_color($base, $alpha: -50%);
 $dark-color: scale_color($base, $saturation: -35%);
 
-background-image: linear-gradient($clb, $cllb, $cldb);
+background-image:linear-gradient($clb, $cllb, $cldb);
 ```
