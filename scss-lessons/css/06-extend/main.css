@@ -1,0 +1,37 @@
+.base, .new {
+  color: red; }
+  .base:hover, .new:hover {
+    color: green; }
+  .base::after, .new::after {
+    content: "?"; }
+  .base-stuff {
+    height: 5rem; }
+
+.cool, .new {
+  height: 20rem; }
+
+.new {
+  width: 20px; }
+
+/*
+ It is possible to use placeholder
+*/
+.new2 {
+  color: red; }
+
+/*
+  Placeholder for extend with mixin
+*/
+.doc-ock {
+  background: darkred; }
+
+.doc-ock {
+  height: 20px;
+  width: 20px; }
+
+/*
+  Works with media query
+*/
+@media screen and (min-width: 800px) {
+  .buddy {
+    color: purple; } }

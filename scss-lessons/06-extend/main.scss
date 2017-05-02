@@ -1,0 +1,57 @@
+.base {
+  color: red;
+
+  &:hover {color: green}
+  &::after {content: "?"}
+
+  &-stuff {height: 5rem} // this will not be extended
+}
+
+.cool {height: 20rem}
+
+.new {
+  width: 20px;
+  // extend multi classes
+  @extend .base, .cool;
+}
+
+/*
+ It is possible to use placeholder
+*/
+
+%base {
+  color: red;
+}
+
+.new2 {
+  @extend %base;
+}
+
+/*
+  Placeholder for extend with mixin
+*/
+%hero {background: linear-gradient(red, white, black)}
+%villain {background: darkred}
+
+@mixin character($type: hero) {
+  height: 20px;
+  width: 20px;
+
+  @extend %#{$type}; // #{} --> output a string
+}
+
+.doc-ock {@include character(villain)}
+
+
+/*
+  Works with media query
+*/
+@media screen and (min-width: 800px) {
+  %buddy { color: purple; }
+}
+
+@media screen and (min-width: 800px) {
+  .buddy {
+    @extend %buddy;
+  }
+}

@@ -26,6 +26,9 @@ Also including some lib demo for easy layout our website.
     * [02 justify content](flex-layout-lessons/02-justify-content)
     
   * [SCSS](scss-lessons)
-    * [Install node-sass](scss-lessons/01-install.scss)
-    * [Partial file and variable](scss-lessons/02-organize-scss-into-multiple-files-with-partials)
-    * [Parent selector](scss-lessons/03-parent-selector)
+    * [01 Install node-sass](scss-lessons/01-install.scss)
+    * [02 Partial file and variable](scss-lessons/02-organize-scss-into-multiple-files-with-partials)
+    * [03 Parent selector](scss-lessons/03-parent-selector)
+    * [04 Color fns](scss-lessons/04-color-fns)
+    * [05 @mixin & @content](scss-lessons/05-mixin)
+    * [06 @extend & #{}](scss-lessons/06-extend)
