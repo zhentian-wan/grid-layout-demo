@@ -1,0 +1,65 @@
+// doesn't include 10
+@for $i from 1 to 10 {
+  .order {
+    order: $i;
+  }
+}
+
+// includes 5
+@for $x from 1 through 5 {
+  .level {
+    z-index: $x;
+  }
+}
+
+@for $col from 1 through 10 {
+  .col-#{$col} {
+    width: 100% / $col;
+  }
+}
+
+@for $i from 0 through 10 {
+  $value: .5 * $i;
+  $has-decimal: floor($value) != $value;
+  $class-name: if(
+          $has-decimal,
+          #{$value - 0.5}pt5,
+          $value
+  );
+
+  .mt-#{$class-name} {
+    margin-top: #{$value}rem;
+  }
+}
+
+@for $i from 0 through 10 {
+  $value: .5 * $i;
+
+  [class~="mt-#{$value}"] {
+    margin-top: #{$value}rem;
+  }
+}
+
+@for $i from 0 through 5 {
+  $color: red;
+  $color-value: if($i == 0, $color, lighten($color, 5% * $i));
+
+  .#{$color}#{$i} {
+    color: $color-value;
+  }
+}
+
+
+@mixin light-color-class($color, $color-name,$i) {
+  $color-value: if($i == 0, $color, lighten($color, 5% * $i));
+
+  .#{$color-name}#{$i} {
+    color: $color-value;
+  }
+}
+
+@for $i from 0 through 5 {
+  @include light-color-class(red, 'passion', $i);
+  @include light-color-class(green, 'natural', $i);
+  @include light-color-class(blue, 'cool', $i);
+}

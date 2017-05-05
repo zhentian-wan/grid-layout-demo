@@ -32,3 +32,4 @@ Also including some lib demo for easy layout our website.
     * [04 Color fns](scss-lessons/04-color-fns)
     * [05 @mixin & @content](scss-lessons/05-mixin)
     * [06 @extend & #{}](scss-lessons/06-extend)
+    * [07 @for loop](scss-lessons/07-for)
