@@ -3,7 +3,6 @@
 In this repo, we are going to learn advanced layout system such as grid layout and flex layout.
 
 Also including some lib demo for easy layout our website.
-
     
 
 ## Content
@@ -33,3 +32,5 @@ Also including some lib demo for easy layout our website.
     * [05 @mixin & @content](scss-lessons/05-mixin)
     * [06 @extend & #{}](scss-lessons/06-extend)
     * [07 @for loop](scss-lessons/07-for)
+    * [08 @each](scss-lessons/08-each)
+    * [09 @function](scss-lessons)(09-function)

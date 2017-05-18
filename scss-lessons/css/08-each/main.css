@@ -1,0 +1,39 @@
+.wonder-woman-logo {
+  content: "wonder-woman"; }
+
+.spiderman-logo {
+  content: "spiderman"; }
+
+.batman-logo {
+  content: "batman"; }
+
+.superman-logo {
+  content: "superman"; }
+
+@media only screen and (min-width: 375px) {
+  .container-width {
+    width: 250px; } }
+
+@media only screen and (min-width: 768px) {
+  .container-width {
+    width: 500px; } }
+
+@media only screen and (min-width: 1200px) {
+  .container-width {
+    width: 750px; } }
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .wonder-woman {
+    background-color: crimson; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+  .spiderman {
+    background-color: darkred; } }
+
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  .batman {
+    background-color: grey; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .superman {
+    background-color: blue; } }

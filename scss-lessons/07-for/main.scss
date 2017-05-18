@@ -23,8 +23,8 @@
   $has-decimal: floor($value) != $value;
   $class-name: if(
           $has-decimal,
-          #{$value - 0.5}pt5,
-          $value
+          #{$value - 0.5}pt5, // if true
+          $value   // if false
   );
 
   .mt-#{$class-name} {
