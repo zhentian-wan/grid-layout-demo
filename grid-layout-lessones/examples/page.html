@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid layout example page</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 5fr;
+        grid-template-rows: auto 1fr 2fr auto;
+        grid-gap: 20px 10px;
+        grid-template-areas:
+          "header header"
+          "nav content"
+          "portfolio portfolio"
+          "footer footer";
+      }
+
+      @media (max-width: 700px) {
+        .container {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "header"
+            "nav"
+            "content"
+            "portfolio"
+            "footer";
+        }
+      }
+
+      .header {
+        grid-area: header;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 10px;
+        grid-template-columns: 1fr;
+        align-items: center;
+        padding: 10px;
+        min-height: 60px;
+      }
+
+      @media (max-width: 500px) {
+        .header {
+          grid-auto-flow: row;
+        }
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .portfolio {
+        grid-area: portfolio;
+        display: grid;
+        grid-template-columns: repeat(
+          auto-fit,
+          minmax(100px, 2fr) minmax(100px, 1fr)
+        );
+        grid-template-rows: repeat(2, 1fr 2fr);
+        grid-gap: 5px;
+        padding: 3px;
+      }
+
+      .content {
+        grid-area: content;
+        display: grid;
+        /*align-items: Y axis alignment*/
+        align-items: center;
+      }
+
+      .footer {
+        grid-area: footer;
+        display: grid;
+        min-height: 60px;
+        place-content: center;
+      }
+
+      .item {
+        border: 5px solid black;
+      }
+    </style>
+  </head>
+
+  <body class="container">
+    <header class="header item">
+      <em><strong>LOGO</strong></em>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="https://github.com/eggheadio" target="_blank">Github</a>
+      <a href="mailto:eggo@email.com">Contact</a>
+    </header>
+    <nav class="nav item">nav</nav>
+    <div id="app" class="content item">
+      content sergsre sger
+      <br />
+      content sergsre sger
+      <br />
+      content sergsre sger
+      <br />
+      content sergsre sger
+      <br />
+      content sergsre sger
+      <br />
+    </div>
+    <div class="portfolio item">
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+      <div class="portfolio_item item">
+        This is a portfolio item!
+      </div>
+    </div>
+    <footer class="footer item">
+      footer
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
